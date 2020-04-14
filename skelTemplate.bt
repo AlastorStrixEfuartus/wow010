@@ -607,6 +607,9 @@ typedef struct
 
     int16_t parent_bone;
     uint16_t submesh_id;
+    uint16_t uDistToFurthDesc;
+    uint16_t uZRatioOfChain;
+    M2Track translation (T_C3Vector);
     M2Track rotation (T_M2CompQuat);
     M2Track scale (T_C3Vector);
     C3Vector pivot;
