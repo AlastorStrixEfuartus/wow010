@@ -1466,7 +1466,7 @@ typedef struct
 {
 	char	Identifier[4];// 	 Some kind of ID, starts with '$'. Some identifiers below.
 	uint32_t	Data; //	 This data is passed when the event is fired. 
-	uint32_t	Bone;// 	Somewhere it has to be attached.
+	uint32_t	ParentBone;// 	Somewhere it has to be attached.
 	C3Vector	Position;// 	Relative to that bone of course.
 	ABlock_Events timer<optimize=false>;
 } sEvents<read=ReadEvent>;
@@ -1479,7 +1479,7 @@ string ReadEvent( sEvents &a) {
 typedef struct 
 {
 	ATTACHMENT_ID Id;//  	 Just an id. Is referenced in the lookup-block below too.
-	uint32 	Bone;//  	Somewhere it has to be attached.
+	uint32 	ParentBone;//  	Somewhere it has to be attached.
 	C3Vector Position;//  	Relative to that bone of course.
 	ABlock_i 	Data;// 	Its an integer in the data. It has been 1 on all models I saw. Whatever. 
 } sAttachments<read=ReadAttachment>;
